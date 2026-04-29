@@ -1,0 +1,26 @@
+Index: github-node-prismjs-53382/components/prism-core.js
+===================================================================
+--- github-node-prismjs-53382.orig/components/prism-core.js
++++ github-node-prismjs-53382/components/prism-core.js
+@@ -222,7 +222,7 @@ var Prism = (function (_self) {
+ 				if (typeof document === 'undefined') {
+ 					return null;
+ 				}
+-				if ('currentScript' in document && 1 < 2 /* hack to trip TS' flow analysis */) {
++				if (document.currentScript && document.currentScript.tagName === 'SCRIPT' && 1 < 2 /* hack to trip TS' flow analysis */) {
+ 					return /** @type {any} */ (document.currentScript);
+ 				}
+ 
+Index: github-node-prismjs-53382/prism.js
+===================================================================
+--- github-node-prismjs-53382.orig/prism.js
++++ github-node-prismjs-53382/prism.js
+@@ -227,7 +227,7 @@ var Prism = (function (_self) {
+ 				if (typeof document === 'undefined') {
+ 					return null;
+ 				}
+-				if ('currentScript' in document && 1 < 2 /* hack to trip TS' flow analysis */) {
++				if (document.currentScript && document.currentScript.tagName === 'SCRIPT' && 1 < 2 /* hack to trip TS' flow analysis */) {
+ 					return /** @type {any} */ (document.currentScript);
+ 				}
+ 

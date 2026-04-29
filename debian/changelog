@@ -1,3 +1,10 @@
+node-prismjs (1.29.0+dfsg+~1.26.0-1deepin1) unstable; urgency=medium
+
+  * Fix CVE-2024-53382: DOM Clobbering vulnerability in currentScript
+    lookup
+
+ -- deepin-ci-robot <packages@deepin.org>  Wed, 29 Apr 2026 21:04:17 +0800
+
 node-prismjs (1.29.0+dfsg+~1.26.0-1) unstable; urgency=medium
 
   * Team upload
